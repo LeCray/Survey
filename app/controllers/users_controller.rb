@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
 	before_action :only_see_own_page, only: :show unless :admin?
 
-	before_action :keep_Users_out_of_index, only: :index
+	before_action :keep_users_out_of_index, only: :index
 
 	def index
 		@users = User.all.order('created_at DESC')
@@ -36,26 +36,11 @@ class UsersController < ApplicationController
 
 private
 
-	def User_params
-		params.require(:User).permit(:title, :first_name, :last_name, :email, :telephone, :mobile, 
+	def user_params
+		params.require(:user).permit(:title, :first_name, :last_name, :email, :telephone, :mobile, 
 									:home_province, :organisation, :position,
 									:title, :current_campus, :future_campus,
 									:description )
-
-									
-
-		 t.string "first_name"
-    t.string "last_name"
-    t.string "email"
-    t.decimal "telephone"
-    t.decimal "mobile"
-    t.string "home_province"
-    t.string "organisation"
-    t.string "position"
-    t.string "title"
-    t.string "current_campus"
-    t.string "future_campus"
-    t.string "description"
 	end
 
 
@@ -66,12 +51,12 @@ private
 
 	def only_see_own_page
 	@user = User.find(params[:id])
-	  if current_User != @user 
+	  if current_user != @user 
 	    redirect_to User_path(current_User.id)
 	  end
 	end
 
-	def keep_Users_out_of_index
+	def keep_users_out_of_index
 		if user_logged_in?
 			redirect_to user_path(current_user.id)
 		end

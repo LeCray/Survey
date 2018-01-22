@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\app",
+    "\\app\\models"
   ],
+  "SelectedNode": "\\app\\models\\user.rb",
   "PreviewInSolutionExplorer": false
 }
