@@ -21,8 +21,8 @@ class UsersController < ApplicationController
 		
 
 		if @user.save!
-      		flash.now[:info] = "Success"
-      		redirect_to @user
+      		#AdminMailer.account_activation(@admin).deliver_now
+      		redirect_to new_user_path, notice: "Please check your emails to verify your account"	
 		else
 			render 'new'
 		end
@@ -40,7 +40,7 @@ private
 		params.require(:user).permit(:title, :first_name, :last_name, :email, :telephone, :mobile, 
 									:home_province, :organisation, :position,
 									:current_campus, :future_campus,
-									:description )
+									:description, :password, :password_confirmation, )
 	end
 
 

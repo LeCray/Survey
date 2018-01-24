@@ -9,10 +9,10 @@ class User < ApplicationRecord
 	validates :last_name, presence: true
 	validates :email, presence: true
 	validates :home_province, presence: true
-	validates :description, presence: true
+	validates :position, presence: true
 
 	TITLES = ["Mr","Ms", "Mrs", "Dr", "Pr"]
-	DESCRIPTIONS = ["Education Administrator","Current Student", "Aspiring Student", "Educator",
+	POSITIONS = ["Education Administrator","Current Student", "Aspiring Student", "Educator",
 					"Parent", "Property Owner", "Other"]
 
 		  # Sets the password reset attributes.

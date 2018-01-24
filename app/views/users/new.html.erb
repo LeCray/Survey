@@ -1,11 +1,13 @@
 <div class="container" style="height: 500px">
-	<div style="margin-top: 120px; margin-bottom: -50px">
-		<% flash.each do |key, value| %>
-			<div style="text-align: center; " class="alert alert-<%= key %>">
-				<%= value %>
+	<% if !flash[:notice].blank? %>
+		<div class="row" style="margin-top: 100px; margin-bottom: -100px">
+			<div class="col-xs-8 col-xs-offset-2">
+				<div class = "alert alert-success" style="border-radius: 3px; text-align: center">
+					<%= flash[:notice] %>
+				</div>
 			</div>
-		<% end %>
-	</div>	
+		</div>
+	<% end %>	
 
 
 
@@ -17,20 +19,19 @@
 				<%= bootstrap_form_for(@user) do |f| %>
 
 				<%= f.select :title, options_for_select(User::TITLES), {}, class: "form-control" %>
-				<%= f.text_field :first_name, label: 'First Name'%> 
-				<%= f.text_field :last_name, label: 'Last Name' %> 
-				<%= f.text_field :email, label: 'Email Address' %> 
-				<%= f.text_field :organisation, label: 'Organisation'%> 
-				<%= f.text_field :position, label: 'Position'%> 
-				<%= f.select :description, options_for_select(User::DESCRIPTIONS), {}, class: "form-control" %> 
+				<%= f.text_field :first_name, label: 'First Name', :required => 'required'%> 
+				<%= f.text_field :last_name, label: 'Last Name', :required => 'required' %> 
+				<%= f.text_field :email, label: 'Email Address', :required => 'required' %> 
+				<%= f.text_field :organisation, label: 'Organisation', :required => 'required'%> 
+				<%= f.select :position, options_for_select(User::POSITIONS), {}, class: "form-control" %> 
 				<%= f.telephone_field :mobile, label: 'Mobile Number', placeholder: "Optional"%> 
 				<%= f.telephone_field :telephone, label: 'Telephone Number', placeholder: "Optional"%> 
-				<%= f.text_field :home_province, label: 'Home Province'%> 
+				<%= f.text_field :home_province, label: 'Home Province', :required => 'required'%> 
 				<%= f.text_field :current_campus, label: 'Current Campus'%> 
 				<%= f.text_field :future_campus, label: 'Future Campus'%> <br>
 
-				<%= f.password_field :password, label: 'Password' %> 
-				<%= f.password_field :password_confirmation, label: 'Confirm Password' %> <br>
+				<%= f.password_field :password, label: 'Password' , :required => 'required'%> 
+				<%= f.password_field :password_confirmation, label: 'Confirm Password', :required => 'required' %> <br>
 
 
 				<div style="margin-top: 15px">
