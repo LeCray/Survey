@@ -11,6 +11,10 @@ class User < ApplicationRecord
 	validates :home_province, presence: true
 	validates :description, presence: true
 
+	TITLES = ["Mr","Ms", "Mrs", "Dr", "Pr"]
+	DESCRIPTIONS = ["Education Administrator","Current Student", "Aspiring Student", "Educator",
+					"Parent", "Property Owner", "Other"]
+
 		  # Sets the password reset attributes.
 	def create_reset_digest
 		self.reset_token = User.new_token

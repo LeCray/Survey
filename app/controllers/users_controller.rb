@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-	include SessionsHelper
+	#include SessionsHelper
 
 	before_action :only_see_own_page, only: :show unless :admin?
 
@@ -39,7 +39,7 @@ private
 	def user_params
 		params.require(:user).permit(:title, :first_name, :last_name, :email, :telephone, :mobile, 
 									:home_province, :organisation, :position,
-									:title, :current_campus, :future_campus,
+									:current_campus, :future_campus,
 									:description )
 	end
 
