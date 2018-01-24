@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 		
 
 		if @user.save!
-      		#AdminMailer.account_activation(@admin).deliver_now
+      		UserMailer.account_activation(@user).deliver_now
       		redirect_to new_user_path, notice: "Please check your emails to verify your account"	
 		else
 			render 'new'

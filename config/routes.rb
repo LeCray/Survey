@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
 	resources :users
 	resources :password_reset
+	resources :account_activations, only: [:edit]
 
 
   

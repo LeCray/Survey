@@ -1,6 +1,6 @@
 class User < ApplicationRecord
 
-	attr_accessor :reset_token, :resent_sent_at
+	attr_accessor :reset_token, :activation_token, :resent_sent_at
 
 	has_secure_password
 
@@ -15,7 +15,7 @@ class User < ApplicationRecord
 	POSITIONS = ["Education Administrator","Current Student", "Aspiring Student", "Educator",
 					"Parent", "Property Owner", "Other"]
 
-		  # Sets the password reset attributes.
+	# Sets the password reset attributes.
 	def create_reset_digest
 		self.reset_token = User.new_token
 		update_attribute(:reset_digest,  User.digest(reset_token))
@@ -39,7 +39,7 @@ class User < ApplicationRecord
       self.email = email.downcase
     end
 
-    	# Returns a random token.
+    # Returns a random token.
 	def User.new_token
 		SecureRandom.urlsafe_base64
 	end
