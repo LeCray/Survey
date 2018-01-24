@@ -1,8 +1,9 @@
 class AccountActivationsController < ApplicationController
+	include SessionsHelper	
 
 	def edit
 		user = User.find_by(email: params[:email])
-		if user && (!user.activated? || user.activated.nil?) && user.authenticated?(:activation, params[:id])
+		if user && (!user.activated? || user.activated.nil?) 
 			user.update_attribute(:activated, true)
 			user.update_attribute(:activated_at, Time.zone.now)																																																																																																																																		
 			log_in user

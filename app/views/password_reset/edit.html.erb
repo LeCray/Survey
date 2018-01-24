@@ -1,12 +1,12 @@
-<div class="container" style="margin-top: 150px">
+<div class="container">
 	<div class="body">
 
-		<div class="row change" style="margin-top: -50px; margin-bottom: 50px" >
+		<div class="row change" >
 			<div class="col-xs-12 col-lg-6 col-lg-offset-2">
 				<% if !flash[:notice].blank? %>
-					<div class="incorrect" >
-						<% if flash[:notice] == "Incorrect Combination" %>
-						   <div class = "alert alert-danger" style="border-radius: 2px" >
+					<div class="incorrect">
+						<% if flash[:notice] == "Email not found" || "Can't be empty" %>
+						   <div class = "alert alert-danger" style="border-radius: 2px">
 						      <%= flash[:notice] %>
 						   </div>
 						<% else %>
@@ -16,36 +16,28 @@
 						<% end %>
 					</div>
 				<% end %>
-
 			</div>
 		</div>
 
-		<% provide(:title, "Log in") %>
-		<div class="row change">
+		<div id="change" class="row" style="margin-top: 150px">
 			<div class="col-xs-12 col-lg-6 col-lg-offset-2">
-				<h5 style="color: grey"> LOGIN </h5>
+				<h5 style="color: grey">RESET PASSWORD</h5>
 				<hr style="margin-bottom: 30px">
 
-				<%= bootstrap_form_for(:session, url: login_path) do |f| %>
-					<%= f.email_field :email, label: 'Email'%><br>
-				    <%= f.password_field :password, label: 'Password'%>
+				<%= bootstrap_form_for(@user, url: password_reset_path(params[:id])) do |f| %>
+					<%= hidden_field_tag :email, @user.email %>
+					<%= f.password_field :password%>
+					<%= f.password_field :password_confirmation, :required => 'required'%>
 
-				    <%= link_to "Forgot Password", new_password_reset_path %>
-				    <div style="margin-top: 30px">
-				    	<%= f.submit "Log in", class: "btn btn-outline" %>
-				    	<%= link_to root_path, class: 'btn btn-outline-warning' do %>
-			              Cancel
-			            <% end %>
-				    </div>
-			    <% end %>			  		   
-
-			</div>
-			
+					<div style="margin-top: 30px">
+						<%= f.submit "Update password", class: "btn btn-outline" %>
+					</div>
+				<% end %>
+		  </div>
 		</div>
+
 	</div>
-
 </div>
-
 
 <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 <script src="https://cdn.rawgit.com/HubSpot/tether/v1.3.4/dist/js/tether.min.js"></script>
@@ -55,8 +47,3 @@
 <script>
   $('body').bootstrapMaterialDesign();
 </script>
-
-
-
-
-

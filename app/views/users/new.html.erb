@@ -21,7 +21,7 @@
 				<%= f.select :title, options_for_select(User::TITLES), {}, class: "form-control" %>
 				<%= f.text_field :first_name, label: 'First Name', :required => 'required'%> 
 				<%= f.text_field :last_name, label: 'Last Name', :required => 'required' %> 
-				<%= f.text_field :email, label: 'Email Address', :required => 'required' %> 
+				<%= f.email_field :email, label: 'Email Address', :required => 'required' %> 
 				<%= f.text_field :organisation, label: 'Organisation', :required => 'required'%> 
 				<%= f.select :position, options_for_select(User::POSITIONS), {}, class: "form-control" %> 
 				<%= f.telephone_field :mobile, label: 'Mobile Number', placeholder: "Optional"%> 

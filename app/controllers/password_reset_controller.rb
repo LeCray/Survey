@@ -14,7 +14,7 @@ class PasswordResetController < ApplicationController
 		if @user
 			@user.create_reset_digest
 			
-			#UserMailer.password_reset(@user).deliver_now
+			UserMailer.password_reset(@user).deliver_now
 			redirect_to new_password_reset_path, notice: "An email to reset your password has been sent"
 		else
 			
@@ -31,7 +31,7 @@ class PasswordResetController < ApplicationController
 			@user.errors.add(:password, "can't be empty")
 		    render 'edit'
 		elsif @user.update_attributes(user_params)          # Case (4)
-			user_log_in @user
+			log_in @user
 			redirect_to @user, notice: "Password has been reset"
 		else
 		render 'edit'                                     # Case (2)

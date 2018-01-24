@@ -1,3 +1,15 @@
-<h1 style="margin-top: 100px">
+<div class="row change" style="margin-top: 150px; margin-bottom: 50px" >
+	<div class="col-xs-12 col-lg-6 col-lg-offset-2">
+		<% if !flash[:notice].blank? %>
+			<div class="incorrect">
+			   <div class = "alert alert-success" style="border-radius: 2px">
+			      <%= flash[:notice] %>
+			   </div>
+			</div>
+		<% end %>
+	</div>
+</div>
+
+<h1 style="margin-top: 150px">
 	Users Dashboard
 </h1>

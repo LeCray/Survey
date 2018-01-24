@@ -21,6 +21,7 @@ class UsersController < ApplicationController
 		
 
 		if @user.save!
+			@user.activation_token = User.new_token
       		UserMailer.account_activation(@user).deliver_now
       		redirect_to new_user_path, notice: "Please check your emails to verify your account"	
 		else
