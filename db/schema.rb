@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180124162410) do
+ActiveRecord::Schema.define(version: 20180124162842) do
 
   create_table "users", force: :cascade do |t|
     t.string "first_name"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20180124162410) do
     t.boolean "activated"
     t.datetime "activated_at"
     t.string "reset_digest"
+    t.datetime "reset_sent_at"
   end
 
 end

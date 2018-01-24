@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-	#include SessionsHelper
+	include SessionsHelper
 
 	before_action :only_see_own_page, only: :show unless :admin?
 
@@ -57,7 +57,7 @@ private
 	end
 
 	def keep_users_out_of_index
-		if user_logged_in?
+		if !current_user.nil?
 			redirect_to user_path(current_user.id)
 		end
 	end
