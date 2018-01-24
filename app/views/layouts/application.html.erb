@@ -51,7 +51,27 @@
       				<ul class="nav navbar-nav navbar-right" style="text-align: left">
 						<li><a href="#">About</a></li>
 						<li><a href="#">Contact</a></li>
-						<li><a href="#">Login</a></li>
+					
+
+				        <% if !current_user.nil? %>
+				        	<li class="dropdown" style="text-align: left" >
+					            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				              		<%= @current_user.first_name %> 
+					            </a>
+					            <ul class="dropdown-menu" style="text-align: left">
+					            	<li><%= link_to "My Dashboard", user_path(@current_user.id) %></li>
+									<li><%= link_to "Change Password", user_password_change_path(@current_user) %></li>
+									<li class="divider"></li>
+									<li>
+					              		<%= link_to "Log out", logout_path, method: :delete %>
+					              	</li>
+					            </ul>
+				          	</li>
+
+				        <% else %>
+				        	<li><%= link_to "Log in", login_path %></li>
+				        <% end %>
+
 			    	</ul>
 			</div>
 		</nav>
