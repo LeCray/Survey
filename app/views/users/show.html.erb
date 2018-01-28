@@ -10,6 +10,34 @@
 	</div>
 </div>
 
-<h1 style="margin-top: 150px">
-	Users Dashboard
-</h1>
+<div class="container">
+	<!-- Survey Status -->
+	<div class="row">
+		<div class="col-lg-2 col-offset-1">
+			<h2>
+				<%= @user.title %> <%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %>
+			</h2>
+		</div>
+		<div class="col-lg-4 col-offset-1">
+			<h4> Overall Status </h4>
+			<p style="font-style: italic;"> 
+				Status 
+			</p>
+		</div>
+	</div>
+
+	<!-- Criteria -->
+	<div class="row" style="margin-top: 50px">
+
+		<!-- On Campus -->
+		<div class="col-lg-3 col-lg-offset-2" class="main" >
+			<h5> On Campus </h5>
+		</div>
+
+		<!-- Off Campus -->
+		<div class="col-lg-3 col-lg-offset-2" class="main">
+			<h5> Off Campus </h5>
+		</div>		
+
+	</div>
+</div>
