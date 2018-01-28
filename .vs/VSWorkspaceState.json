@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\app",
-    "\\app\\models"
+    "\\app\\views",
+    "\\app\\views\\users"
   ],
-  "SelectedNode": "\\app\\models\\user.rb",
+  "SelectedNode": "\\app\\views\\users\\show.html.erb",
   "PreviewInSolutionExplorer": false
 }
