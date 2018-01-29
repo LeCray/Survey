@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 	resources :password_reset
 	resources :account_activations, only: [:edit]
 
+	get 'residence_halls' => 'sub_cats#residence_halls'
+
 
   
 end
