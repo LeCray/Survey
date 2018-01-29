@@ -35,9 +35,9 @@
 				On Campus 
 			</button>
 			<div id="on-campus-sub-cats" style="display: none; padding: 20px; border-bottom: 1px solid grey">
-				<h5> Residence Halls </h5>
+				<%= link_to on_residence_halls_path do %> <h5> Residence Halls </h5> <% end %>
 				<hr>
-				<h5> Multiple Bedroom Houses </h5>
+				<%= link_to on_multiple_bedroom_houses_path do %> <h5> Multiple Bedroom Houses </h5> <% end %>
 			</div>
 		</div>
 
@@ -47,13 +47,13 @@
 				Off Campus 
 			</button>
 			<div id="off-campus-sub-cats" style="display: none; padding: 20px; border-bottom: 1px solid grey">
-				<h5> Individual-Bedroom Houses </h5>
+				<%= link_to off_residence_halls_path do %> <h5> Residence Halls </h5> <% end %>
 				<hr>
-				<h5> Multiple-Bedroom Houses </h5>
+				<%= link_to off_individual_bedroom_houses_path do %> <h5> Individual-Bedroom Houses </h5> <% end %>
 				<hr>
-				<h5> Residence Halls </h5>
+				<%= link_to off_multiple_bedroom_houses_path do %> <h5> Multiple Bedroom Houses </h5> <% end %>
 				<hr>
-				<h5> Apartments </h5>
+				<%= link_to off_apartments_path do %> <h5> Apartments </h5> <% end %>
 			</div>
 		</div>		
 
