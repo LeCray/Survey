@@ -17,6 +17,12 @@ Rails.application.routes.draw do
 	get 'off_individual_bedroom_houses' => 'sub_cats#off_individual_bedroom_houses'
 	get 'off_multiple_bedroom_houses' => 'sub_cats#off_multiple_bedroom_houses'
 	get 'off_residence_halls' => 'sub_cats#off_residence_halls'
-	get 'off_apartments' => 'sub_cats#off_apartments'
+
+
+
+	get 'off_apartments' => 'sub_cats # off_apartments'
+
+
+
 
 end
