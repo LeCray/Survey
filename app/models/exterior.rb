@@ -1,7 +1,5 @@
-module Exterior
-  def self.table_name_prefix
-    'exterior_'
-  end
-
-  has_one :exterior_building_exterior
+class ExteriorClass < ApplicationRecord
+	has_one :building_exterior
 end
+
+

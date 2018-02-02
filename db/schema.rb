@@ -10,14 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180202142852) do
+ActiveRecord::Schema.define(version: 20180202191040) do
 
+  create_table "building_exterior_questions", force: :cascade do |t|
+    t.integer "building_exterior_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "q1"
+  end
 
+  create_table "building_exteriors", force: :cascade do |t|
+    t.integer "exterior_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "exterior_building_exterior_questions", force: :cascade do |t|
     t.integer "building_exterior_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "q1"
   end
 
   create_table "exterior_building_exteriors", force: :cascade do |t|

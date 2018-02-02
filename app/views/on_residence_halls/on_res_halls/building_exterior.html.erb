@@ -1,3 +1,33 @@
 <div class="container" style="margin-top: 100px">
 	<h3> Building Exterior </h3>
+
+	<div class="col-xs-12 col-lg-6 col-lg-offset-2" >
+		
+		<hr style="margin-bottom: 30px">
+
+			<%= bootstrap_form_for @question, url: on_residence_halls_building_exterior_path do |f| %>
+				<%= f.form_group :q1, label: { text: "The Question" } do %>
+					<%= f.radio_button :q1, true, label: 'Agree', checked: true %>
+					<%= f.radio_button :q1, false, label: 'Disagree'%>
+				<% end %>
+
+		  			
+			
+
+	
+		<br>
+
+
+			<div style="margin-top: 15px">
+				<%= f.submit "Submit", class: 'btn btn-outline' %><br>
+				<%= link_to root_path, class: 'btn btn-outline-warning' do %>
+	          		Cancel
+	        	<% end %>
+			</div>
+
+			<% end %>
+			
+				
+	
+		</div>
 </div>
