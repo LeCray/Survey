@@ -1,0 +1,2 @@
+module OnResHallsHelper
+end
