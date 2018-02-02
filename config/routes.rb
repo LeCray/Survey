@@ -15,15 +15,18 @@ Rails.application.routes.draw do
 	#SUB-CATEGORIES
 	get 'on_residence_halls' 			=> 'sub_cats#on_residence_halls'
 	get 'on_multiple_bedroom_houses' 	=> 'sub_cats#on_multiple_bedroom_houses'
+
 	get 'off_individual_bedroom_houses' => 'sub_cats#off_individual_bedroom_houses'
 	get 'off_multiple_bedroom_houses' 	=> 'sub_cats#off_multiple_bedroom_houses'
 	get 'off_residence_halls'			=> 'sub_cats#off_residence_halls'
 	get 'off_apartments' 				=> 'sub_cats#off_apartments'
 
 	#ON CAMPUS RES
-	get 'on_building_exterior' 			=> 'on_res_halls#building_exterior'
-	get 'on_grounds_gardens' 			=> 'on_res_halls#grounds_gardens'
-	get 'on_parking_driveway_signage' 	=> 'on_res_halls#parking_driveway_signage'
-	get 'on_safety_security'			=> 'on_res_halls#safety_security'
+	namespace :on_residence_halls do 
+		get 'building_exterior' 		=> 'on_res_halls#building_exterior'
+		get 'grounds_gardens' 			=> 'on_res_halls#grounds_gardens'
+		get 'parking_driveway_signage' 	=> 'on_res_halls#parking_driveway_signage'
+		get 'safety_security'			=> 'on_res_halls#safety_security'
+	end
 end
 
