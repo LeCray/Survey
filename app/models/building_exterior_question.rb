@@ -1,0 +1,2 @@
+class BuildingExteriorQuestion < ApplicationRecord
+end

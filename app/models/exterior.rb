@@ -1,0 +1,2 @@
+class Exterior < ApplicationRecord
+end
