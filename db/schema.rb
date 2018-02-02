@@ -10,7 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180124162842) do
+ActiveRecord::Schema.define(version: 20180202142852) do
+
+  create_table "building_exterior_questions", force: :cascade do |t|
+    t.integer "building_exterior_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "building_exteriors", force: :cascade do |t|
+    t.integer "exterior_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "exterior_building_exterior_questions", force: :cascade do |t|
+    t.integer "building_exterior_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "exterior_building_exteriors", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "exterior_id"
+  end
+
+  create_table "exteriors", force: :cascade do |t|
+    t.integer "on_campus_residence_hall_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "on_campus_residence_halls", force: :cascade do |t|
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name"

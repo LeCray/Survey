@@ -1,0 +1,2 @@
+class BuildingExterior < ApplicationRecord
+end
