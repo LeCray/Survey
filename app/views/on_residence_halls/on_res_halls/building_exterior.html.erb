@@ -2,20 +2,35 @@
 	<h3> Building Exterior </h3>
 	<hr style="margin-bottom: 50px">
 	
-	<div class="row">
-		<div class="col-lg-9 " >
-			<h6 style="font-style: italic">
-				1: Reception and/or unit entrances clearly identifiable and well lit at night.
-			</h6>
-			<form id="q1" style="margin-left: 20px; margin-top: 15px">
-				<input type="radio" name="q1" value="true" checked > Agree<br>
-				<input type="radio" name="q1" value="false" > Disagree<br>
-			</form>
-			<div id="q1-co">
-				<textarea type="text_area" name="q1_comment" form="q1" rows="3" cols="75" placeholder="Comment if you disagree..." style="margin-left: 20px"></textarea>
+	<div class="row" >
+		<div class="col-lg-7 " >
+			<div style="padding: 20px; ">
+				<h6 style="font-style: italic">
+					1: Reception and/or unit entrances clearly identifiable and well lit at night.
+				</h6>
+				<form id="q1" style="margin-left: 20px; margin-top: 15px">
+					<input type="radio" name="q1" value="true" checked id="q1-a"> Agree<br>
+					<input type="radio" name="q1" value="false" id="q1-d"> Disagree<br>
+				</form>
+				<div id="q1-comment" style="display: none">
+					<textarea type="text_area" name="q1_comment" form="q1" rows="3" cols="69" placeholder="Comment if you disagree..." style="margin-left: 20px"></textarea>
+				</div>
+				<hr style="border-color: grey; margin-left: 20px">
 			</div>
 		</div>
 	</div>
 		
 		
 </div>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#q1-d').click(function(){
+	    	$('#q1-comment').show('slow');
+		});
+		$('#q1-a').click(function(){
+	    	$('#q1-comment').hide('slow');
+		});
+	});
+</script>
