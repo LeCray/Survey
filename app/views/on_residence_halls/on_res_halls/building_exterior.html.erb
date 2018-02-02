@@ -1,3 +1,33 @@
 <div class="container" style="margin-top: 100px">
 	<h3> Building Exterior </h3>
+
+	<div class="row">
+		
+		<div class="col-xs-12 col-lg-6 col-lg-offset-2" >
+			<h5 style="color: grey"> NEW USER </h5>
+			<hr style="margin-bottom: 30px">
+
+				<%= bootstrap_form_for(@building_exterior) do |f| %>
+
+				<%= f.select :title, options_for_select(User::TITLES), {}, class: "form-control" %>
+				<%= f.text_field :first_name, label: 'First Name', :required => 'required'%> 
+				<%= f.text_field :last_name, label: 'Last Name', :required => 'required' %> 
+		
+
+			
+
+				<div style="margin-top: 15px">
+					<%= f.submit "Create Account", class: 'btn btn-outline' %><br>
+					<%= link_to root_path, class: 'btn btn-outline-warning' do %>
+	              		Cancel
+	            	<% end %>
+				</div>
+
+				<% end %>
+				
+				
+	
+		</div>
+		</div>
+	</div>
 </div>

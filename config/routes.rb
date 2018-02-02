@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 	get 'off_residence_halls'			=> 'sub_cats#off_residence_halls'
 	get 'off_apartments' 				=> 'sub_cats#off_apartments'
 
-	#ON CAMPUS RES
+	#ON CAMPUS RES HALLS
 	namespace :on_residence_halls do 
 		get 'building_exterior' 		=> 'on_res_halls#building_exterior'
 		get 'grounds_gardens' 			=> 'on_res_halls#grounds_gardens'
