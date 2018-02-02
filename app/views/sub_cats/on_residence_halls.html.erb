@@ -1,4 +1,4 @@
-<div class="container" style="margin-top: 100px">
+<div class="container" style="margin-top: 100px; margin-bottom: 300px">
 	<h3> On Campus Residence Halls </h3>
 
 	<p style="margin-bottom: 50px"> 
@@ -7,23 +7,38 @@
 	
 	<div class="row">
 		<div class="col-lg-3">
-			<button id="exterior-btn" class="btn btn-outline btn-block" style="text-align: left"><strong> A: Exterior </strong> </button>
+			<button id="exterior-btn" class="btn btn-outline btn-block" style="text-align: left">
+				<strong> A: Exterior </strong> 
+			</button>
 
-			<button id="student-rooms-btn" class="btn btn-outline btn-block" style="text-align: left"> <strong> B: Student Rooms </strong> </button>
+			<button id="student-rooms-btn" class="btn btn-outline btn-block" style="text-align: left"> 
+				<strong> B: Student Rooms </strong> 
+			</button>
 
-			<button id="ablution-btn" class="btn btn-outline btn-block" style="text-align: left"><strong> C: Ablution Facilities </strong></button>
+			<button id="ablution-btn" class="btn btn-outline btn-block" style="text-align: left">
+				<strong> C: Ablution Facilities </strong>
+			</button>
 
-			<button id="exterior-btn" class="btn btn-outline btn-block" style="text-align: left"><strong> D: Exterior </strong> </button>
+			<button id="kitchens-btn" class="btn btn-outline btn-block" style="text-align: left">
+				<strong> D: Kitchens </strong> 
+			</button>
 
-			<button id="student-rooms-btn" class="btn btn-outline btn-block" style="text-align: left"> <strong> E: Student Rooms </strong> </button>
+			<button id="food-beverage-btn" class="btn btn-outline btn-block" style="text-align: left"> 
+				<strong> E: Food and Beverage </strong> 
+			</button>
 
-			<button id="ablution-btn" class="btn btn-outline btn-block" style="text-align: left"><strong> F: Ablution Facilities </strong></button>
+			<button id="services-btn" class="btn btn-outline btn-block" style="text-align: left">
+				<strong> F: General Services</strong>
+			</button>
 		</div>
 
 		<div class="col-lg-6">
+			<!-- EXTERIOR -->
 			<div id="exterior" style="display: none; padding-right: 20px; padding-bottom: 20px; border-bottom: 1px solid grey">
-
-				<h4 style="display: inline-block; margin-right: 10px"> Exterior </h4><span class="glyphicon glyphicon-tree-deciduous"></span>
+				<h4 style="display: inline-block; margin-right: 10px; "> 
+					Exterior 
+				</h4>
+				<span class="glyphicon glyphicon-tree-deciduous"></span>
 				<hr>
 				<%= link_to off_residence_halls_path do %> <h6> Building Exterior </h6> <% end %>
 				<hr>
@@ -33,29 +48,137 @@
 				<hr>
 				<%= link_to off_apartments_path do %> <h6> Safety and Security </h6> <% end %>
 			</div>
-
-			<div id="student-rooms" style="display: none; padding-right: 20px; padding-bottom: 20px; border-bottom: 1px solid grey">
-				<h4 style="display: inline-block; margin-right: 10px"> Student Rooms </h4><span class="glyphicon glyphicon-education"></span>
+			
+			<!-- STUDENT ROOMS -->
+			<div id="student-rooms" style="display: none; padding-right: 20px; padding-bottom: 20px; border-bottom: 1px solid grey; margin-bottom: 100px">
+				<h4 style="display: inline-block; margin-right: 10px"> 
+					Student Rooms 
+				</h4>
+				<span class="glyphicon glyphicon-education"></span>
 				<hr>
-				<%= link_to off_residence_halls_path do %> <h6> Building Exterior </h6> <% end %>
+				<%= link_to off_residence_halls_path do %> 
+					<h6> Student Room, Entrance, Safety, Security </h6> 
+				<% end %>
 				<hr>
-				<%= link_to off_individual_bedroom_houses_path do %> <h6> Grounds and Gardens </h6> <% end %>
+				<%= link_to off_individual_bedroom_houses_path do %> 
+					<h6>Beds, Bases, Mattresses  </h6> 
+				<% end %>
 				<hr>
-				<%= link_to off_multiple_bedroom_houses_path do %> <h6> Parking / Driveway / Signage </h6> <% end %>
+				<%= link_to off_multiple_bedroom_houses_path do %> 
+					<h6> Furniture and fittings inside student room </h6> 
+				<% end %>
 				<hr>
-				<%= link_to off_apartments_path do %> <h6> Safety and Security </h6> <% end %>
+				<%= link_to off_apartments_path do %> 
+					<h6> Additional Furniture and fittings inside Common Rooms </h6> 
+				<% end %>
+				<hr>
+				<%= link_to off_multiple_bedroom_houses_path do %> 
+					<h6> Wardrobes, Shelves and Storage </h6> 
+				<% end %>
+				<hr>
+				<%= link_to off_apartments_path do %> 
+					<h6> Curtains and Window Coverings </h6> 
+				<% end %>
+				<hr>
+				<%= link_to off_apartments_path do %> 
+					<h6> Walls, Flooring, Ceiling </h6> 
+				<% end %>
+				<hr>
+				<%= link_to off_multiple_bedroom_houses_path do %> 
+					<h6> Temperature Control and Ventilation </h6> 
+				<% end %>
+				<hr>
+				<%= link_to off_apartments_path do %> 
+					<h6> Lighting, Power and Switches </h6> 
+				<% end %>
+				<hr>
+				<%= link_to off_multiple_bedroom_houses_path do %> 
+					<h6> Electronic Appliances </h6> 
+				<% end %>
+				<hr>
+				<%= link_to off_apartments_path do %> 
+					<h6> Spaciousness and Overall Impression </h6> 
+				<% end %>
 			</div>
-
+			
+			<!-- ABLUTION -->
 			<div id="ablution" style="display: none; padding-right: 20px; padding-bottom: 20px; border-bottom: 1px solid grey">
-				<h4 style="display: inline-block; margin-right: 10px"> Ablution Facilities </h4><span class="glyphicon glyphicon-home"></span>
+				<h4 style="display: inline-block; margin-right: 10px"> 
+					Ablution Facilities 
+				</h4>
+				<span class="glyphicon glyphicon-home"></span>
 				<hr>
-				<%= link_to off_residence_halls_path do %> <h6> Building Exterior </h6> <% end %>
+				<%= link_to off_residence_halls_path do %> 
+					<h6> Flooring and Ceiling </h6> 
+				<% end %>
 				<hr>
-				<%= link_to off_individual_bedroom_houses_path do %> <h6> Grounds and Gardens </h6> <% end %>
+				<%= link_to off_individual_bedroom_houses_path do %> 
+					<h6> Lighting and Ventilation </h6> 
+				<% end %>
 				<hr>
-				<%= link_to off_multiple_bedroom_houses_path do %> <h6> Parking / Driveway / Signage </h6> <% end %>
+				<%= link_to off_multiple_bedroom_houses_path do %> 
+					<h6> Fixtures and Fittings </h6> 
+				<% end %>
+			</div>
+			
+			<!-- KITCHENS -->
+			<div id="kitchens" style="display: none; padding-right: 20px; padding-bottom: 20px; border-bottom: 1px solid grey">
+				<h4 style="display: inline-block; margin-right: 10px"> 
+					Kitchens 
+				</h4>
+				<span class="glyphicon glyphicon-th-large"></span>
 				<hr>
-				<%= link_to off_apartments_path do %> <h6> Safety and Security </h6> <% end %>
+				<%= link_to off_residence_halls_path do %> 
+					<h6> Flooring and Ceiling </h6> 
+				<% end %>
+				<hr>
+				<%= link_to off_individual_bedroom_houses_path do %> 
+					<h6> Lighting and Ventilation </h6> 
+				<% end %>
+				<hr>
+				<%= link_to off_multiple_bedroom_houses_path do %> 
+					<h6> Fixtures and Fittings </h6> 
+				<% end %>
+			</div>
+			
+			<!-- FOOD & BEVERAGE -->
+			<div id="food-beverage" style="display: none; padding-right: 20px; padding-bottom: 20px; border-bottom: 1px solid grey">
+				<h4 style="display: inline-block; margin-right: 10px"> 
+					Food and Beverage 
+				</h4>
+				<span class="glyphicon glyphicon-cutlery"></span>
+				<hr>
+				<%= link_to off_residence_halls_path do %> 
+					<h6> Flooring and Ceiling </h6> 
+				<% end %>
+				<hr>
+				<%= link_to off_individual_bedroom_houses_path do %> 
+					<h6> Lighting and Ventilation </h6> 
+				<% end %>
+				<hr>
+				<%= link_to off_multiple_bedroom_houses_path do %> 
+					<h6> Fixtures and Fittings </h6> 
+				<% end %>
+			</div>
+
+			<!-- GENERAL SERVICES AND SERVICES -->
+			<div id="services" style="display: none; padding-right: 20px; padding-bottom: 20px; border-bottom: 1px solid grey">
+				<h4 style="display: inline-block; margin-right: 10px"> 
+					General Services 
+				</h4>
+				<span class="glyphicon glyphicon-wrench"></span>
+				<hr>
+				<%= link_to off_residence_halls_path do %> 
+					<h6> Flooring and Ceiling </h6> 
+				<% end %>
+				<hr>
+				<%= link_to off_individual_bedroom_houses_path do %> 
+					<h6> Lighting and Ventilation </h6> 
+				<% end %>
+				<hr>
+				<%= link_to off_multiple_bedroom_houses_path do %> 
+					<h6> Fixtures and Fittings </h6> 
+				<% end %>
 			</div>
 		</div>
 
@@ -70,16 +193,49 @@
 	    	$('#exterior').show('slow');
 	    	$("#student-rooms").hide('slow');
 	    	$("#ablution").hide('slow');
+	    	$("#kitchens").hide('slow');
+	    	$("#food-beverage").hide('slow');
+	    	$("#services").hide('slow');
 		});
 		$("#student-rooms-btn").hover(function(){
 		    $("#student-rooms").show('slow');
 		    $('#exterior').hide('slow');
 		    $("#ablution").hide('slow');
+		    $("#kitchens").hide('slow');
+	    	$("#food-beverage").hide('slow');
+	    	$("#services").hide('slow');
 		});
 		$("#ablution-btn").hover(function(){
 		    $("#ablution").show('slow');
 		    $("#student-rooms").hide('slow');
 		    $('#exterior').hide('slow');
+		    $("#kitchens").hide('slow');
+	    	$("#food-beverage").hide('slow');
+	    	$("#services").hide('slow');
+		});
+		$("#kitchens-btn").hover(function(){
+		    $("#kitchens").show('slow');
+		    $("#student-rooms").hide('slow');
+		    $('#exterior').hide('slow');
+		    $("#ablution").hide('slow');
+		    $("#food-beverage").hide('slow');
+		    $("#services").hide('slow');
+		});
+		$("#food-beverage-btn").hover(function(){
+		    $("#food-beverage").show('slow');
+		    $("#student-rooms").hide('slow');
+		    $('#exterior').hide('slow');
+	       	$("#ablution").hide('slow');
+		    $("#services").hide('slow');
+		    $("#kitchens").hide('slow');
+		});
+		$("#services-btn").hover(function(){
+		    $("#services").show('slow');
+		    $("#student-rooms").hide('slow');
+		    $('#exterior').hide('slow');
+		    $("#food-beverage").hide('slow');
+		    $("#kitchens").hide('slow');
+		    $("#ablution").hide('slow');
 		});
 	});
 </script>
