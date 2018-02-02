@@ -7,60 +7,79 @@
 	
 	<div class="row">
 		<div class="col-lg-3">
-			<button id="exterior-btn" class="btn btn-outline btn-block" ><strong> A: Exterior </strong> </button>
-			
-			<div id="exterior" style="display: none; padding: 20px; border-bottom: 1px solid grey">
-				<%= link_to off_residence_halls_path do %> <h6> Building Exterior </h6> <% end %>
-				<hr>
-				<%= link_to off_individual_bedroom_houses_path do %> <h6> Grounds and Gardens </h6> <% end %>
-				<hr>
-				<%= link_to off_multiple_bedroom_houses_path do %> <h6> Parking / Driveway / Signage </h6> <% end %>
-				<hr>
-				<%= link_to off_apartments_path do %> <h6> Safety and Security </h6> <% end %>
-			</div>
-		</div>
-		<div class="col-lg-3">
-			<button id="student-rooms-btn" class="btn btn-outline btn-block" > <strong> B: Student Rooms </strong> </button>
-			
-			<div id="student-rooms" style="display: none; padding: 20px; border-bottom: 1px solid grey">
-				<%= link_to off_residence_halls_path do %> <h6> Building Exterior </h6> <% end %>
-				<hr>
-				<%= link_to off_individual_bedroom_houses_path do %> <h6> Grounds and Gardens </h6> <% end %>
-				<hr>
-				<%= link_to off_multiple_bedroom_houses_path do %> <h6> Parking / Driveway / Signage </h6> <% end %>
-				<hr>
-				<%= link_to off_apartments_path do %> <h6> Safety and Security </h6> <% end %>
-			</div>
-		</div>
-		<div class="col-lg-3">
-			<button id="ablution-btn" class="btn btn-outline btn-block" ><strong> C: Ablution Facilities </strong></button>
-			
-			<div id="ablution" style="display: none; padding: 20px; border-bottom: 1px solid grey">
-				<%= link_to off_residence_halls_path do %> <h6> Building Exterior </h6> <% end %>
-				<hr>
-				<%= link_to off_individual_bedroom_houses_path do %> <h6> Grounds and Gardens </h6> <% end %>
-				<hr>
-				<%= link_to off_multiple_bedroom_houses_path do %> <h6> Parking / Driveway / Signage </h6> <% end %>
-				<hr>
-				<%= link_to off_apartments_path do %> <h6> Safety and Security </h6> <% end %>
-			</div>
-		</div>
-	</div>
+			<button id="exterior-btn" class="btn btn-outline btn-block" style="text-align: left"><strong> A: Exterior </strong> </button>
 
+			<button id="student-rooms-btn" class="btn btn-outline btn-block" style="text-align: left"> <strong> B: Student Rooms </strong> </button>
+
+			<button id="ablution-btn" class="btn btn-outline btn-block" style="text-align: left"><strong> C: Ablution Facilities </strong></button>
+
+			<button id="exterior-btn" class="btn btn-outline btn-block" style="text-align: left"><strong> D: Exterior </strong> </button>
+
+			<button id="student-rooms-btn" class="btn btn-outline btn-block" style="text-align: left"> <strong> E: Student Rooms </strong> </button>
+
+			<button id="ablution-btn" class="btn btn-outline btn-block" style="text-align: left"><strong> F: Ablution Facilities </strong></button>
+		</div>
+
+		<div class="col-lg-6">
+			<div id="exterior" style="display: none; padding-right: 20px; padding-bottom: 20px; border-bottom: 1px solid grey">
+
+				<h4 style="display: inline-block; margin-right: 10px"> Exterior </h4><span class="glyphicon glyphicon-tree-deciduous"></span>
+				<hr>
+				<%= link_to off_residence_halls_path do %> <h6> Building Exterior </h6> <% end %>
+				<hr>
+				<%= link_to off_individual_bedroom_houses_path do %> <h6> Grounds and Gardens </h6> <% end %>
+				<hr>
+				<%= link_to off_multiple_bedroom_houses_path do %> <h6> Parking / Driveway / Signage </h6> <% end %>
+				<hr>
+				<%= link_to off_apartments_path do %> <h6> Safety and Security </h6> <% end %>
+			</div>
+
+			<div id="student-rooms" style="display: none; padding-right: 20px; padding-bottom: 20px; border-bottom: 1px solid grey">
+				<h4 style="display: inline-block; margin-right: 10px"> Student Rooms </h4><span class="glyphicon glyphicon-education"></span>
+				<hr>
+				<%= link_to off_residence_halls_path do %> <h6> Building Exterior </h6> <% end %>
+				<hr>
+				<%= link_to off_individual_bedroom_houses_path do %> <h6> Grounds and Gardens </h6> <% end %>
+				<hr>
+				<%= link_to off_multiple_bedroom_houses_path do %> <h6> Parking / Driveway / Signage </h6> <% end %>
+				<hr>
+				<%= link_to off_apartments_path do %> <h6> Safety and Security </h6> <% end %>
+			</div>
+
+			<div id="ablution" style="display: none; padding-right: 20px; padding-bottom: 20px; border-bottom: 1px solid grey">
+				<h4 style="display: inline-block; margin-right: 10px"> Ablution Facilities </h4><span class="glyphicon glyphicon-home"></span>
+				<hr>
+				<%= link_to off_residence_halls_path do %> <h6> Building Exterior </h6> <% end %>
+				<hr>
+				<%= link_to off_individual_bedroom_houses_path do %> <h6> Grounds and Gardens </h6> <% end %>
+				<hr>
+				<%= link_to off_multiple_bedroom_houses_path do %> <h6> Parking / Driveway / Signage </h6> <% end %>
+				<hr>
+				<%= link_to off_apartments_path do %> <h6> Safety and Security </h6> <% end %>
+			</div>
+		</div>
+
+			
 
 </div>
 
 <script type="text/javascript">
 	$(document).ready(function(){
 	
-		$('#exterior-btn').click(function(){
-	    	$('#exterior').slideToggle('slow');
+		$('#exterior-btn').hover(function(){
+	    	$('#exterior').show('slow');
+	    	$("#student-rooms").hide('slow');
+	    	$("#ablution").hide('slow');
 		});
-		$("#student-rooms-btn").click(function(){
-		    $("#student-rooms").slideToggle('slow');
+		$("#student-rooms-btn").hover(function(){
+		    $("#student-rooms").show('slow');
+		    $('#exterior').hide('slow');
+		    $("#ablution").hide('slow');
 		});
-		$("#ablution-btn").click(function(){
-		    $("#ablution").slideToggle('slow');
+		$("#ablution-btn").hover(function(){
+		    $("#ablution").show('slow');
+		    $("#student-rooms").hide('slow');
+		    $('#exterior').hide('slow');
 		});
 	});
 </script>
